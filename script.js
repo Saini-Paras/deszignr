@@ -48,8 +48,10 @@ window.addEventListener('mouseout',()=>{
 
 
 // =============PROJECTS 
-const projectsCard=document.querySelectorAll('.project');
+const projectsCard=document.querySelectorAll('.project-box');
+const projectsCardImg=document.querySelectorAll('.project-box img');
 const projectCursor=document.querySelector('.project-cursor')
+
 
 projectsCard.forEach(pCard=>{
     pCard.addEventListener('mousemove',function(e){
@@ -78,3 +80,4 @@ navLinks.forEach((navLink) => {
 footerLinks.forEach((footerLink) => {
   footerLink.addEventListener("click", smoothScrollingFunc);
 });
+
