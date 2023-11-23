@@ -65,6 +65,9 @@ projectsCard.forEach(pCard=>{
 // SMOOTH SCROLLING
 const navLinks=document.querySelectorAll('.toggle-menu ul li a')
 const footerLinks=document.querySelectorAll('.f-top ul li a')
+const ctaBtn=document.querySelector('.cta-btn')
+const heroBtns=document.querySelectorAll('.btn-hero')
+
 
 const smoothScrollingFunc=(e) => {
   e.preventDefault();
@@ -73,10 +76,15 @@ const smoothScrollingFunc=(e) => {
   section.scrollIntoView({ behavior: "smooth" });
 }
 
+heroBtns.forEach(btn=>{
+  btn.addEventListener('click',smoothScrollingFunc)
+})
+
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", smoothScrollingFunc);
   navLink.addEventListener("click", menuCloseFunc);
 });
+ctaBtn.addEventListener('click',smoothScrollingFunc)
 footerLinks.forEach((footerLink) => {
   footerLink.addEventListener("click", smoothScrollingFunc);
 });
